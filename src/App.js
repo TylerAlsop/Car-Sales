@@ -1,5 +1,6 @@
 import React from 'react';
 import { createStore } from "redux";
+import { reducer } from './reducers';
 
 
 import Header from './components/Header';
@@ -7,7 +8,7 @@ import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
-const store = createStore();
+const store = createStore(reducer);
 
 const App = () => {
   const state = {
