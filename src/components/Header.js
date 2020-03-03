@@ -9,7 +9,7 @@ const Header = props => {
         <img src={props.car.image} alt={props.car.name} />
       </figure>
       <h2>{props.car.name}</h2>
-      <p>Amount: ${props.car.price}</p>
+      <p>Starting Price: ${props.car.price}</p>
     </>
   );
 };

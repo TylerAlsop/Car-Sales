@@ -12,6 +12,7 @@ const AddedFeatures = props => {
             <AddedFeature key={item.id} feature={item} />
           ))}
         </ol>
+        // <p>Additional Cost: ${props.additionalPrice}</p>
       ) : (
         <p>You can purchase items from the store.</p>
       )}
