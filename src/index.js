@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import { reducer } from './reducers';
+import { rootReducer } from './reducers';
 
 import App from './App';
 
@@ -11,7 +11,7 @@ import 'bulma/css/bulma.css';
 import './styles.scss';
 
 
-const store = createStore(reducer);
+const store = createStore(rootReducer);
 
 
 const rootElement = document.getElementById('root');
