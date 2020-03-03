@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 
 const AddedFeature = props => {
+  console.log("props in AddedFeature.js", props)
   return (
     <li>
       {/* Add an onClick to run a function to remove a feature */}
