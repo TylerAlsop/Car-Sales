@@ -1,10 +1,7 @@
 import React from 'react';
 import AdditionalFeature from './AdditionalFeature';
-import { connect } from 'react-redux';
-
 
 const AdditionalFeatures = props => {
-  console.log("props in AdditionalFeatures.js", props)
   return (
     <div className="content">
       <h4>Additional Features</h4>
@@ -21,9 +18,4 @@ const AdditionalFeatures = props => {
   );
 };
 
-
-const mapStateToProps = state => {
-  console.log("State in mapStateToProps in AdditionalFeatures.js", state)
-}
-
-export default connect(mapStateToProps, {})(AdditionalFeatures);
+export default AdditionalFeatures;

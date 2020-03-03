@@ -20,12 +20,22 @@ export const featureReducer = (state = initialState, action) => {
     switch(action.type) {
         case "ADD_FEATURE":
             return {
-                
-            };
+                ...state,
+                car: {
+                    ...state.car, 
+                    features: [
+                        ...state.car.features, 
+                        action.payload
+                    ]
+                },
+                additionalFeatures: [...state.additionalFeatures]
+            }
         case "REMOVE_FEATURE":
             return {
-
+                ...state,
             };
+        default:
+            return state;
     };
 };
 
@@ -33,26 +43,3 @@ export const featureReducer = (state = initialState, action) => {
 
 
 
-
-
-
-
-
-
-// export const reducer = (state = initialState, action) => {
-//     console.log("inside reducer", state, action);
-//     switch (action.type) {
-//       case "":
-//         return {
-//           ...state,
-//         };
-//       // NEW CASE HERE
-//       case "":
-//         return {
-//           ...state,
-//         };
-//       default:
-//         return state;
-//     }
-
-// };
