@@ -10,4 +10,8 @@ const Total = props => {
   );
 };
 
-export default Total;
+const mapStateToProps = state => {
+  console.log("State in mapStateToProps in Total.js", state)
+}
+
+export default connect(mapStateToProps, {})(Total);

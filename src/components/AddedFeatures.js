@@ -22,4 +22,9 @@ const AddedFeatures = props => {
   );
 };
 
-export default AddedFeatures;
+const mapStateToProps = state => {
+  console.log("State in mapStateToProps in AddedFeatures.js", state)
+}
+
+export default connect(mapStateToProps, {})(AddedFeatures);
+

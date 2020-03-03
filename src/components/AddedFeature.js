@@ -12,4 +12,10 @@ const AddedFeature = props => {
   );
 };
 
-export default AddedFeature;
+
+const mapStateToProps = state => {
+  console.log("State in mapStateToProps in AddedFeature.js", state)
+}
+
+export default connect(mapStateToProps, {})(AddedFeature);
+
