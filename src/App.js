@@ -1,6 +1,8 @@
 import React from 'react';
 import { createStore } from "redux";
 import { rootReducer } from './reducers';
+import { connect } from 'react-redux';
+
 
 
 import Header from './components/Header';
