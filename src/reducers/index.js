@@ -1,13 +1,13 @@
 import { combineReducers } from "redux";
 
 import { addFeatureReducer } from "./addFeatureReducer";
-import { addedFeatureReducer } from "./addedFeatureReducer";
+import { removeFeatureReducer } from "./removeFeatureReducer";
 import { totalReducer } from "./totalReducer";
 
 
 export const rootReducer = combineReducers({
     addFeatureReducer,
-    addedFeatureReducer,
+    removeFeatureReducer,
     totalReducer
 });
 
