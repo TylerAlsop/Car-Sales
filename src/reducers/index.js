@@ -28,18 +28,21 @@ export const featureReducer = (state = initialState, action) => {
                         action.payload
                     ]
                 },
-                additionalFeatures: [...state.additionalFeatures]
+                additionalFeatures: state.additionalFeatures.filter(feature => feature.id !== action.payload.id)
             }
         case "REMOVE_FEATURE":
             return {
                 ...state,
+                car: {
+                    ...state.car,
+                    features: [
+                        state.car.features.filter(feature => feature.id !== action.payload.id)
+                    ],
+                    additionalFeatures: [...state.additionalFeatures, action.payload]
+                }
             };
         default:
             return state;
     };
 };
-
-
-
-
 
